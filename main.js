@@ -8,14 +8,15 @@ const repoResult = document.querySelector('.repositories')
 // Fetch
 
 async function getPost(inp) {
-    return await fetch(`https://api.github.com/search/repositories?q=${inp.target.value}&per_page=5`)
-        .then(response => response.json())
-        .then(objects => {
-            objects = objects.items
+    let response;
+    let objects;
+    response = await fetch(`https://api.github.com/search/repositories?q=${inp.target.value}&per_page=5`)
+    objects = await response.json()
+    objects = objects.items;
             createActiveRepoList(objects)
             createRepo()
-            });
-}
+
+    };
 
 function debounce(fn, debounceTime) {
     let timer;
