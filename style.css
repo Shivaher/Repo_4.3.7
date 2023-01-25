@@ -1,0 +1,63 @@
+body {
+    display: flex;
+    justify-content: center;
+    background-color: #C4C4C4;
+}
+
+.container {
+    width: 500px;
+    display: grid;
+    margin-top: 100px;
+}
+
+.inputSrc {
+    width: 500px;
+    height: 61px;
+    font-size: 40px;
+    padding-left: 5px;
+}
+
+.autocomplete {
+    padding: 0px;
+    text-align: left;
+    font-size: 40px; 
+    opacity: 0;
+    pointer-events: none;  
+}
+
+.autocomplete li {
+    list-style: none;
+    border: 1px solid black;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.inputBlock.active .autocomplete {
+    opacity: 1;
+    pointer-events: auto;  
+}
+
+.inputBlock.active .autocomplete li {
+    display: block;
+    background-color: #E3E3E3;
+}
+
+.repositories li {
+    list-style: none;
+    padding: 8px 12px;
+    margin-top: 5px;
+    background-color: #E27BEB;
+    border-radius: 5px;
+    font-size: 20px;
+    text-align: left;
+}
+
+.repositories button {
+    margin-top: -30px;
+    float: right;
+    border: none;
+    color: #FF0000;
+    background-color: #E27BEB;
+    cursor: pointer;
+    font-size: 40px;
+}
